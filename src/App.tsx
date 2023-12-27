@@ -1,8 +1,11 @@
 import styled from "styled-components"
 import { Colors } from "./utilities"
+import { FaqContainer } from "./components"
 
 
 const AppLayout = styled.div`
+  display:grid;
+  place-items: center;
   height: 100vh;
   background-color:${Colors.lightPink};
   position: relative;
@@ -28,7 +31,7 @@ function App() {
 
   return (
     <AppLayout>
-    <h1>holaaaa</h1>
+      <FaqContainer />
     </AppLayout>
   )
 }
