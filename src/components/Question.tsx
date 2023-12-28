@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { QuestionHeader } from "@/components"
+import { QuestionHeader, Text } from "@/components"
 import { useState } from "react"
 
 
@@ -8,10 +8,14 @@ const QuestionLayout = styled.div`
     flex-direction: column;
 `
 
-const Question = () => {
+interface Props {
+    title: string
+    text: string
+}
+
+const Question = ({ title , text }: Props) => {
 
     const [isOpen, setIsOpen] = useState(false);
-
 
     const handleOpen = () => {
         setIsOpen(!isOpen)
@@ -19,8 +23,8 @@ const Question = () => {
 
     return (
         <QuestionLayout>
-            <QuestionHeader handleOpen={handleOpen} isOpen />
-
+            <QuestionHeader handleOpen={handleOpen} isOpen title={title} />
+            <Text $isOpen={isOpen}>{text}</Text>
         </QuestionLayout>
     )
 }
