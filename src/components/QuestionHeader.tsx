@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Icon } from "@/components"
+import { Colors } from "@/utilities"
 
 const QuestionHeaderLayout = styled.button`
     background: none;
@@ -14,6 +15,11 @@ const QuestionTitle = styled.p`
     font-size: 1.5rem;
     text-align: left;
     font-weight: 600;
+
+    &:hover{
+        cursor: pointer;
+        color: #AD28EB;
+    }
 `
 
 interface Props {
