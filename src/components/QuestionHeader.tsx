@@ -2,13 +2,17 @@ import styled from "styled-components"
 import { Icon } from "@/components"
 
 const QuestionHeaderLayout = styled.button`
-    outline: none;
-    background-color: none;
+    background: none;
+    border: none;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
 `
 
 const QuestionTitle = styled.p`
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    text-align: left;
     font-weight: 600;
 `
 
@@ -20,11 +24,14 @@ interface Props {
 
 const QuestionHeader = ({ title, isOpen, handleOpen }: Props) => {
 
-
     return (
         <QuestionHeaderLayout onClick={handleOpen}>
-            <QuestionTitle>{title}</QuestionTitle>
-            <Icon src={isOpen ? "/public/images/icon-plus.svg" : "/public/images/icon-minus.svg"}/>
+            <QuestionTitle >{title}</QuestionTitle>
+            {
+                isOpen
+                    ? <Icon src="images/icon-minus.svg" />
+                    : <Icon src="images/icon-plus.svg" />
+            }
         </QuestionHeaderLayout>
     )
 }

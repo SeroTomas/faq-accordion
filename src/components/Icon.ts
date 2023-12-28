@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const Icon = styled.img`
-    height: 25px;
+    height: 30px;
 `
