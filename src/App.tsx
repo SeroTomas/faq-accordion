@@ -16,7 +16,7 @@ const AppLayout = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("/public/images/background-pattern-desktop.svg");
+    background-image: url("images/background-pattern-desktop.svg");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
