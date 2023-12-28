@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Icon } from "@/components"
-import { Colors } from "@/utilities"
 
 const QuestionHeaderLayout = styled.button`
     background: none;
